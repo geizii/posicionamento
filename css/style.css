@@ -104,6 +104,11 @@ p {
   right: -30px;
 }
 
+.bicicleta img {
+  object-fit: cover;
+  height: 100%;
+}
+
 .subtitulo {
   background-image: url("../image/onda.svg");
   font-size: 4rem;
@@ -112,6 +117,7 @@ p {
   text-align: right;
   align-self: center;
   padding: 40px;
+  word-break: break-all;
 }
 
 .vantagens {
@@ -147,13 +153,34 @@ p {
   background-color: #f7f7f7;
 }
 
-/* .datelhe::after {
-  display: inline-block;
-  position: absolute;
-  top: 30px;
-  background: #ee2211;
-  width: 60px;
-  height: 4px;
-  right: -30px;
+@media (max-width: 1000px) {
+  .conteudo-vantagem {
+    grid-template-columns: 1fr;
+  }
+  .subtitulo {
+    text-align: center;
+  }
 }
- */
+
+@media (max-width: 1000px) {
+  body {
+    gap: 30px;
+    margin-top: 20px;
+  }
+  .header {
+    gap: 30px;
+  }
+  .conteudo {
+    grid-template-columns: 1fr;
+  }
+  .introducao {
+    text-align: left;
+    justify-items: start;
+  }
+  .introducao::before {
+    display: none;
+  }
+  .subtitulo {
+    font-size: 3rem;
+  }
+}
